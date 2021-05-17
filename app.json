@@ -1,0 +1,7 @@
+{
+  "name": "Start waxgrab",
+  "description": "teste version",
+  "repository": "https://github.com/leovicio/waxgrab",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
+  "keywords": ["node", "express", "request"]
+}
