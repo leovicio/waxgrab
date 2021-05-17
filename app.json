@@ -1,7 +1,0 @@
-{
-  "name": "WaxGraber",
-  "description": "wax grab",
-  "repository": "https://github.com/leovicio/waxgrab",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["node", "express", "request"]
-}
