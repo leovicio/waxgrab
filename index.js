@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 app.use(rewrite('/getatoom/*', '/atomicassets?query=$1'));
 app.use(rewrite('/getwaxden/*', '/waxsweden?query=$1'));
-
+app.use(rewrite('/getchainwax/*', '/chainwax?query=$1'));
 
 app.get("/atomicassets", (req, res) => {
   // read query parameters
@@ -45,6 +45,24 @@ app.post("/waxsweden", (req, res) => {
   
 	
 });
+
+app.post("/chainwax", (req, res) => {
+  // read query parameters
+  const pathreq = req.query["query"];
+  const sendbody = req.body;
+
+  // craft IEX API URL
+  const url = `https://chain.wax.io/v1/chain/${pathreq}`;
+  
+  request.post({
+    url: url,
+    body: sendbody,
+    json: true
+  }).pipe(res);;
+  
+	
+});
+
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
